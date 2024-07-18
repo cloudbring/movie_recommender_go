@@ -1,0 +1,21 @@
+
+sequenceDiagram
+    participant M as Main
+    participant R as Router
+    participant Re as Recommendation
+    participant Q as Questionnaire
+    participant U as User
+    participant Rev as Reviewer
+    participant A as Alignment
+    M->>R: route()
+    R->>U: login()
+    U-->>R: return user
+    R->>Re: generate(user)
+    Re-->>R: return recommendations
+    R->>Q: create(user)
+    Q-->>R: return questionnaire
+    R->>A: update(user, questionnaire)
+    A-->>R: return updated alignment
+    R->>Rev: getReviews(user)
+    Rev-->>R: return reviews
+    R-->>M: return recommendations, questionnaire, alignment, reviews

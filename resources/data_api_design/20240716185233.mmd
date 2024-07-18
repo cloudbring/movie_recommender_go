@@ -1,0 +1,39 @@
+
+classDiagram
+    class Main {
+        -Router router
+        +main() str
+    }
+    class Router {
+        -Recommendation recommendation
+        -Questionnaire questionnaire
+        -User user
+        -Reviewer reviewer
+        -Alignment alignment
+        +route() str
+    }
+    class Recommendation {
+        +generate() list
+    }
+    class Questionnaire {
+        +create() str
+        +submit() str
+    }
+    class User {
+        +login() str
+        +logout() str
+        +register() str
+    }
+    class Reviewer {
+        +getReviews() list
+    }
+    class Alignment {
+        +update() str
+        +getAlignment() float
+    }
+    Main --> Router
+    Router --> Recommendation
+    Router --> Questionnaire
+    Router --> User
+    Router --> Reviewer
+    Router --> Alignment

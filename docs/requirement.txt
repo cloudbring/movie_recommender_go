@@ -1,0 +1,1 @@
+Design a movie recommendation system based on how often a movie reviewer agrees with a user. Have the rating system generate questionaires for right after the a reviewer or user watches a movie that asks about characters, relationships, plot and any other relevant factors for a movie. Write the app in Go.
